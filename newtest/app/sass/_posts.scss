@@ -1,0 +1,204 @@
+.post {
+	background: $white;
+	border: solid 1px $post-border;
+	height: auto;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 10px;
+	&.notfound {
+		background: $background;
+		.post-container {
+			font-size: 3em;
+			color: $black;
+			font-family: "segoeb";
+			line-height: 150px;
+			text-align: center;
+			color: rgb(97, 97, 97);
+			text-shadow: rgb(224, 224, 224) 1px 1px 0px;
+		}
+	}
+	.post-container {
+		padding: 10px;
+		.top-info {
+			display: inline-block;
+			width: 100%;
+			.logo {
+				width: 50px;
+				float: left;
+				margin-right: 10px;
+				img {
+					border-radius: 50px;
+					width: 100%;
+				}
+			}
+			.user-info {
+				float: left;
+				.user-nickname {
+					
+					font-size: 1.1em;
+					text-align: left;
+					color:$black;
+					font-family: "segoeb";
+					font-weight: 900;
+					width: 100%;
+				}
+				.user-posttime {
+					color:$black;
+					font-family: "segoe";
+					font-weight: 100;
+					display: block;
+					width: 100%;
+					text-align: left;
+				}
+			}
+			.post-menu {
+				float: right;
+				.icon-down-open {
+					cursor: pointer;
+					color: $black;
+					text-align: right;
+				}
+				.menu {
+					display: none;
+					&.open {
+						display: inline-block;
+						z-index: 2;
+						background: $border;
+						width:100px;
+						position: absolute;
+						margin-left: -80px;
+						ul {
+							list-style: none;
+							li {
+								font-family: "segoeb";
+								color: $black;
+								text-align: left;
+								border-bottom: solid 1px $border;
+								padding:5px 10px;
+								cursor: pointer;
+								&:last-of-type {
+									border-bottom: 0;
+								}
+								&:hover {
+									background: $post-border;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.post-content {
+			width: 100%;
+			font-family: "segoe";
+			font-weight: 100;
+			font-size: 1em;
+			text-align: left;
+			.comment-container {
+				&.closed {
+					opacity: 0;
+					height: 0px;
+					overflow: hidden;
+				}
+			}
+			.edit-comment-container {
+				opacity: 0;
+				height: 0px;
+				overflow: hidden;
+				@include transition(all, 300ms, ease);
+				&.active {
+					opacity: 1;
+					height: 34px;
+					overflow: auto;
+					@include transition(all, 300ms, ease);
+				}
+				.edit-comment-input {
+					height: 30px;
+					width: 80%;
+					padding: 5px;
+					color: $black;
+				}
+				button {
+					width: 5%;
+					border: 0;
+					line-height: 30px;
+					height: 30px;
+					cursor: pointer;
+					font-family: "segoeb";
+					&.edit-comment-send {
+						background: $green;
+						color: $white;
+						&:hover {
+							background: $greenh;
+						}
+					}
+					&.edit-comment-cancel {
+						background: none;
+						border: solid 1px $dark-background;
+						&:hover {
+							background: #bbb;
+							color: $white;
+						}
+					}
+				}
+			}
+			.image-attached-true {
+				margin-top: 10px;
+			}
+			.image-attached-false {
+				display: none;
+			}
+		}
+		.post-actions {
+			width: 100%;
+			width: 100%;
+			margin-top: 20px;
+			.like-post {
+				color: $greenh;
+				font-weight: 900;
+				font-family: "segoeb";
+				cursor: pointer;
+				float: left;
+				&:before {
+					content: "Like";
+				}
+				&.liked-true {
+					color: $post-border;
+					font-weight: 900;
+					font-family: "segoeb";
+					float: left;
+					cursor: pointer;
+					&:before {
+						content: "Liked";
+					}
+					&:hover {
+						&:before {
+							content : "Unlike";
+						}
+					}
+				}
+			}
+		}
+	}
+	.post-comments {
+		background: $comments;
+		border-top: solid 1px $border;
+	}
+	.like-section {
+		background: $dark-background;
+		border-bottom: solid 1px $black;
+		width: 100%;
+		padding: 10px;
+		.like-container {
+			color: $black;
+			text-align: left;
+			font-family: "segoe";
+			font-weight: 100;
+			span {
+				font-family: "segoeb";
+				font-weight: 900;
+			}
+		}
+	}
+}

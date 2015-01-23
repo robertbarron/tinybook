@@ -1,0 +1,16 @@
+[
+	{"commentID" : "123", "postID" : "89784644", "time":"20 min", "comment" : "First!", "logo" : "app/images/logos/tere.jpg", "username" : "Teresita Garcia", "liked" : "true"},
+	{"commentID" : "124", "postID" : "89784644", "time":"10 min", "comment" : "Second!", "logo" : "app/images/logos/tere.jpg", "username":"Teresita Garcia", "liked" : "false"},
+	{"commentID" : "125", "postID" : "89784644", "time":"3 min", "comment" : "Wara", "logo" : "app/images/logos/robert.jpg", "username":"Roberto Barron", "liked" : "false"},
+	{"commentID" : "126", "postID" : "89784644", "time":"3 min", "comment" : " Wara Wara!", "logo" : "app/images/logos/yanneth.jpg", "username":"Yanneth Barron", "liked" : "false"},
+	{"commentID" : "127", "postID" : "89784644", "time":"1 min", "comment" : "Silly  Billy", "logo" : "app/images/logos/tere.jpg", "username":"Teresita Garcia", "liked" : "false"},
+	{"commentID" : "128", "postID" : "89784644", "time":"Now", "comment" : "Yes, sir!", "logo" : "app/images/logos/ama.jpg", "username":"Olivia Tovar", "liked" : "false"},
+
+
+	{"commentID" : "129", "postID" : "8912344", "time":"59 min", "comment" : "Check This Out!", "image" : "app/images/comments/1.jpg", "logo" : "app/images/logos/robert.jpg", "username":"Roberto Barron", "liked" : "false"},
+	{"commentID" : "130", "postID" : "8912344", "time":"56 min", "comment" : "", "image" : "app/images/comments/3_n.png", "logo" : "app/images/logos/tere.jpg", "username" : "Teresita Garcia", "liked" : "true"},
+	{"commentID" : "131", "postID" : "8912344", "time":"13 min", "comment" : "=)", "logo" : "app/images/logos/tere.jpg", "username" : "Teresita Garcia", "liked" : "false"},
+	{"commentID" : "132", "postID" : "8912344", "time":"10 min", "comment" : "Almost there!", "logo" : "app/images/logos/robert.jpg", "username":"Roberto Barron", "liked" : "false"},
+	{"commentID" : "133", "postID" : "8912344", "time":"1 min", "comment" : "Whooouu!", "logo" : "app/images/logos/tere.jpg", "username":"Teresita Garcia", "liked" : "false"},
+	{"commentID" : "134", "postID" : "8912344", "time":"1 min", "comment" : "", "image" : "app/images/comments/4_n.png", "logo" : "app/images/logos/tere.jpg", "username":"Teresita Garcia", "liked" : "false"}
+]

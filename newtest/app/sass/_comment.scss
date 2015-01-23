@@ -1,0 +1,172 @@
+.comment {
+	min-height: 50px;
+	clear: both;
+	&:last-of-type {
+		min-height: 60px;
+		display: table;
+	}
+	.comment-container {
+		padding:10px;
+		clear: both;
+		&:after {
+			clear: both;
+		}
+		.top-info {
+			display: inline-block;
+			float: left;
+			.logo {
+				width: 35px;
+				float: left;
+				margin-right: 10px;
+				img {
+					border-radius: 50px;
+					width: 100%;
+				}
+			}
+			.user-info {
+				float: left;
+				.user-nickname {
+					
+					font-size: 1.1em;
+					text-align: left;
+					color:$black;
+					font-family: "segoeb";
+					font-weight: 900;
+					width: 100%;
+				}
+				.user-posttime {
+					color:$black;
+					font-family: "segoe";
+					font-weight: 100;
+					display: block;
+					width: 100%;
+					text-align: left;
+					.time {
+						float: left;
+						margin-right: 20px;
+					}
+					.like-comment {
+						color: $greenh;
+						font-weight: 100;
+						font-family: "segoe";
+						cursor: pointer;
+						&:before {
+							content: "Like";
+						}
+						&.liked-true {
+							color: $post-border;
+							font-weight: 100;
+							font-family: "segoe";
+							cursor: pointer;
+							&:before {
+								content: "Liked";
+							}
+							&:hover {
+								&:before {
+									content : "Unlike";
+								}
+							}
+						}
+					}
+				}
+			}
+			.post-menu {
+				float: right;
+				.icon-down-open {
+					cursor: pointer;
+					color: $black;
+				}
+				.menu {
+					display: none;
+				}
+			}
+		}
+		.comment-content {
+			float: left;
+			font-family: "segoe";
+			font-weight: 100;
+			font-size: 1em;
+			text-align: left;
+			line-height: 1.7em;
+			margin-left: 12px;
+			.image-attached-true {
+				margin-top: 10px;
+			}
+			.image-attached-false {
+				display: none;
+			}
+		}
+	}
+	&.share-tiny {
+		.comment-container {
+			.top-info {
+				width: 33px;
+			}
+			.comment-content {
+				width: 1032px;
+				.input-container {
+					width: 100%;
+					.textarea-container {
+						width: 88%;
+						float: left;
+						textarea {
+							width: 100%;
+							border: 0;
+							resize: none;
+							padding: 8px;
+							height: 33px;
+							color: $black;
+							font-size: 1em;
+						}
+					}
+					#comment-photo {
+						height: 0;
+						opacity: 0;
+						overflow: hidden;
+						width: 0;
+					}
+					.photo-attach {
+						width: 4%;
+						float: left;
+						margin-left: 0px;
+						cursor: pointer;
+						padding: 5px 10px;
+						background: $dark-background;
+						&:hover {
+							background: #bbb;
+							@include transition(all, 0.2s, ease-in-out);
+						}
+					}
+					.image-preview-container {
+						width: 150px;
+						max-width: 200px;
+						max-height: 160px;
+						overflow: hidden;
+						.image-preview {
+							width: 100%;
+							opacity: .6;
+						}
+					}
+					.action-buttons {
+						padding-left: 10px;
+						float: left;
+						width: 8%;
+						.send {
+							background: $green;
+							color: $white;
+							border: 0;
+							width: 100%;
+							padding: 8px 9px;
+							cursor: pointer;
+							@include transition(all, 0.2s, ease-in-out);
+							&:hover {
+								background: $greenh;
+								@include transition(all, 0.2s, ease-in-out);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

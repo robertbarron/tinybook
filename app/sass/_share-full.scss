@@ -1,0 +1,99 @@
+#share-full {
+	height: 150px;
+	background: $background;
+	padding:2%;
+	margin: 0 auto;
+	.share-container {
+		height: 100%;
+		.input-container {
+			border: solid 2px $border;
+			width: 80%;
+			padding: 0%;
+			height: 100%;
+			float: left;
+			.textarea-container {
+				height: 100%;
+				width: 85%;
+				float: left;
+				border-right: solid 2px $border;
+				textarea {
+					width: 100%;
+					height: 100%;
+					border: 0;
+					resize: none;
+					padding: 10px;
+					color: $black;
+					font-size: 1em;
+					font-family: "segoeb";
+				}
+			}
+			#post-photo {
+				height: 0;
+				opacity: 0;
+				overflow: hidden;
+				width: 0;
+			}
+			.no-display {
+				display: none;
+			}
+			.photo-attach {
+				width: 15%;
+				float: right;
+				height: 100%;	
+				cursor: pointer;
+				overflow: hidden;
+				@include transition(all, 0.2s, ease-in-out);
+				&:hover {
+					background: #bbb;
+					@include transition(all, 0.2s, ease-in-out);
+				}
+				.image-preview {
+					width: 100%;
+					opacity: .6;
+				}
+				.icon-camera {
+					font-size: 3em;
+					text-align: center;
+					padding: 10%;
+				}
+				.camera-text {
+					font-family: "segoeb";
+					text-align: center;
+				}
+			}
+		}
+		.action-buttons {
+			width: 20%;
+			float: right;
+			text-align: center;
+			button {
+				cursor: pointer;
+				border: solid 2px $border;
+				text-align: center;
+				width: 80%;
+				height: 45px;
+				font-family: "segoeb";
+				font-size: 1.4em;
+				&.send {
+					background: $green;
+					color: $white;
+					margin-bottom: 15px;
+					border: 0;
+					@include transition(all, 0.2s, ease-in-out);
+					&:hover {
+						background: $greenh;
+						@include transition(all, 0.2s, ease-in-out);
+					}
+				}
+				&.cancel {
+					color: $black;
+					@include transition(all, 0.2s, ease-in-out);
+					&:hover {
+						background: #bbb;
+						@include transition(all, 0.2s, ease-in-out);
+					}
+				}
+			}
+		}
+	}
+}

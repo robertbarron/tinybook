@@ -1,0 +1,8 @@
+[
+	{"postID" : "89784644", "logo" : "app/images/logos/robert.jpg", "time": "Now", "username": "Roberto Barron", "liked": "true", "comment": "This text is a test. This text is a test. This text is a test. This text is a test.", "image-post" : "http://localhost/newtest/dummy-data/images/image.jpg"},
+	{"postID" : "8912344", "image" : "app/images/comments/1.jpg", "logo" : "app/images/logos/tere.jpg", "time": "11 Min", "username": "Teresita Garcia", "liked": "false", "comment": "Almost in Mexico City. Awesome"},
+	{"postID" : "897456644", "logo" : "app/images/logos/robert.jpg", "time": "Now", "username": "Roberto Barron", "liked": "true", "comment": "This text is a test. This text is a test. This text is a test. This text is a test.", "image-post" : "http://localhost/newtest/dummy-data/images/image.jpg"},
+	{"postID" : "8978786844", "logo" : "app/images/logos/robert.jpg", "time": "Now", "username": "Roberto Barron", "liked": "true", "comment": "This text is a test. This text is a test. This text is a test. This text is a test."},
+	{"postID" : "896", "logo" : "app/images/logos/robert.jpg", "time": "Now", "username": "Roberto Barron", "liked": "false","comment": "This text is a test. This text is a test. This text is a test. This text is a test.", "image-post" : "http://localhost/newtest/dummy-data/images/image.jpg"},
+	{"postID" : "12345644", "logo" : "app/images/logos/robert.jpg", "time": "Now", "username": "Roberto Barron", "liked": "true","comment": "This text is a test. This text is a test. This text is a test. This text is a test."}
+]
