@@ -14,11 +14,14 @@ mainController.prototype = {
 		this.templateManager = templateManager;
 	},
 
-	loadHeader : function () {
+	loadHeader : function (callback) {
 		var template = "app/templates/header/header.tpl",
 			idSection = "header";
 
-		this.render(template, idSection);
+		this.render(template, idSection, function (response) {
+			if (callback)
+				callback(true);
+		});
 	},
 	
 	loadShare : function () {
@@ -26,6 +29,28 @@ mainController.prototype = {
 			idSection = "container";
 		
 		this.append(template, idSection)
+	},
+	
+	_addCommas : function (number) {
+		while ( /(\d+)(\d{3})/.test(number.toString()) ) {
+      		number = number.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    	}
+    	return number;
+	},
+
+	animateStats : function ($container, duration) {
+		var _this = this;
+		$container.parent().removeClass('no-display');
+		$({initialValue: 0}).animate({initialValue : $container.text()}, {
+			duration : 2500,
+			easing: 'swing',
+			step: function () {
+				$container.text(_this._addCommas(Math.round(this.initialValue)));
+			},
+			complete: function () {
+				$container.text(_this._addCommas(Math.round(this.initialValue)));	
+			}
+		});
 	},
 
 	getPosts : function (callback) {
@@ -142,12 +167,14 @@ mainController.prototype = {
 		});
 	},
 
-	render: function (template, idSection) {
+	render: function (template, idSection, callback) {
 		var _this = this;
 
 		this.templateManager.getView(template, function (response) {
 			if (response) {
 				_this.templateManager.loadView(response, idSection, undefined);
+				if (callback)
+					callback(true);
 			}
 		});
 	}
