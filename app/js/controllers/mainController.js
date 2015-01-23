@@ -33,9 +33,9 @@ mainController.prototype = {
 	
 	_addCommas : function (number) {
 		while ( /(\d+)(\d{3})/.test(number.toString()) ) {
-      		number = number.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-    	}
-    	return number;
+      			number = number.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+	    	}
+	    	return number;
 	},
 
 	animateStats : function ($container, duration) {
